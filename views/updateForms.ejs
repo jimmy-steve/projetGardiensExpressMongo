@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!--    pour le font size-->
+    <link href="http://fonts.cdnfonts.com/css/josefin-sans" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://bootstrap-colors-extended.herokuapp.com/bootstrap-colors.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css "
+  </head>
+  <body class="background">
+    <nav class="navbar navbar-expand-lg navbar-primary bg-warning text-dark">
+      <div class="container">
+        <a class="navbar-brand text-dark" href="/"><%= title %></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="nav-link btn btn-outline-dark mr-2 text-light"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                Créer un Gardiens
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div
+                    class="modal-content"
+                    style="
+                      border-radius: 25px;
+                      background: linear-gradient(
+                        rgba(0, 0, 0, 0.85),
+                        rgba(0, 0, 0, 0.85)
+                      );
+                    "
+                  >
+                    <div class="modal-header">
+                      <h5
+                        class="modal-title text-center text-light"
+                        id="exampleModalLabel"
+                      >
+                        Formulaire créer un gardiens
+                      </h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="col-12 mx-auto">
+                        <form
+                          action="/postGardiens"
+                          method="POST"
+                          class="needs-validation mx-auto"
+                          id="maForm"
+                        >
+                          <br />
+                          <div class="form-row">
+                            <div class="col-md-8 mb-3">
+                              <label class="text-light" for="nameGardiens">
+                                Saisir le nom :
+                              </label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="nameGardiens"
+                                name="nameGardiens"
+                                placeholder="mySuperHeroeName"
+                                required
+                                minlength="2"
+                                maxlength="45"
+                              />
+                              <div class="valid-feedback">Looks good!</div>
+                            </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="col-md-8 mb-3">
+                              <label class="text-light" for="origin"
+                                >Saisir l'origine :</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="origin"
+                                name="origin"
+                                placeholder="La planète Mars"
+                                required
+                                minlength="2"
+                                maxlength="45"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="col-md-8 mb-3">
+                              <label class="text-light" for="secretIdentity">
+                                Saisir votre identité secrète:
+                              </label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="secretIdentity"
+                                name="secretIdentity"
+                                placeholder="username"
+                                required
+                                minlength="2"
+                                maxlength="45"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="col-md-8 mb-3">
+                              <label class="text-light" for="powers">
+                                Saisir vos pouvoirs spécial :
+                              </label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="powers"
+                                name="powers"
+                                placeholder="Super Power"
+                                required
+                                minlength="2"
+                                maxlength="45"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="text-center">
+                            <input type="hidden" name="admin" value="null" />
+                            <input
+                              type="hidden"
+                              name="source"
+                              value="registerForms"
+                            />
+                            <button
+                              class="btn btn-danger"
+                              style="width: 30%"
+                              type="submit"
+                              id="btnCreer"
+                            >
+                              Créer
+                            </button>
+                          </div>
+                          <br />
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-dark mr-2 text-light"
+                href="/mechants"
+                >Les Méchants</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-dark mr-2 text-light"
+                href="/gardiens"
+                >Les Gardiens</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-dark mr-2 text-light"
+                href="/"
+                id="btnAcceuil"
+                >Acceuil</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container m-3 mx-auto">
+      <div
+        class="card border-warning mb-3 col-8 mx-auto"
+        style="
+          border-radius: 20px;
+          background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+        "
+      >
+        <form
+          action="/updateGardiens"
+          method="post"
+          class="row g-3 needs-validation m-3 border-primary text-center"
+          style="border-radius: 15px"
+          novalidate
+        >
+          <div class="col-12">
+            <h2 class="text-light text-center">
+              Mise a jour de <span id="nameCourant"><%= nameCourant %></span>
+            </h2>
+            <div class="input-group-prepend">
+              <table class="table text-light">
+                <thead>
+                  <tr>
+                    <th scope="col">Label</th>
+                    <th scope="col">Données</th>
+                  </tr>
+                </thead>
+                <tbody class="text-light">
+                  <tr>
+                    <th>
+                      <label for="name">Name :</label>
+                    </th>
+                    <td>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value="<%= nameCourant %>"
+                        readonly="readonly"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="origin">Origin :</label>
+                    </th>
+                    <td>
+                      <input
+                        type="text"
+                        id="origin"
+                        name="origin"
+                        value="<%= origin %>"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="secretIdentity">Secret Identity :</label>
+                    </th>
+                    <td>
+                      <input
+                        type="text"
+                        id="secretIdentity"
+                        name="secretIdentity"
+                        value="<%= secretIdentity %>"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="powers">Powers :</label>
+                    </th>
+                    <td>
+                      <textarea
+                        class="form-control"
+                        id="powers"
+                        name="powers"
+                        rows="6"
+                      >
+<%= powers %>
+                      </textarea>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="col mx-auto text-center m-2">
+            <button class="btn-lg btn-success mr-5" type="submit">
+              Submit
+            </button>
+
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn-sm btn-danger"
+              data-toggle="modal"
+              data-target="#exampleModal2"
+            >
+              Delete
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal2"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Voulez-vous vraiment supprimer ce document !!!
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body"></div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <a
+                      class="btn-sm btn-danger"
+                      href="/deleteGardiens/<%= nameCourant %>"
+                      >Delete</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

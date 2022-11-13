@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!--    pour le font size-->
+    <link href="http://fonts.cdnfonts.com/css/josefin-sans" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://bootstrap-colors-extended.herokuapp.com/bootstrap-colors.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css "
+  </head>
+  <body class="background">
+    <nav class="navbar navbar-expand-lg navbar-primary bg-warning text-dark">
+      <div class="container">
+        <a class="navbar-brand text-dark" href="/"><%= title %></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="nav-link btn btn-outline-dark mr-2 text-light"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                Créer un Gardiens
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div
+                    class="modal-content"
+                    style="
+                      border-radius: 25px;
+                      background: linear-gradient(
+                        rgba(0, 0, 0, 0.85),
+                        rgba(0, 0, 0, 0.85)
+                      );
+                    "
+                  >
+                    <div class="modal-header">
+                      <h5
+                        class="modal-title text-center text-light"
+                        id="exampleModalLabel"
+                      >
+                        Formulaire créer un gardiens
+                      </h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="col-12 mx-auto">
+                        <form
+                          action="/postGardiens"
+                          method="POST"
+                          class="needs-validation mx-auto"
+                          id="maForm"
+                        >
+                          <br />
+                          <div class="form-row">
+                            <div class="col-md-8 mb-3">
+                              <label class="text-light" for="nameGardiens">
+                                Saisir le nom :
+                              </label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="nameGardiens"
+                                name="nameGardiens"
+                                placeholder="mySuperHeroeName"
+                                required
+                                minlength="2"
+                                maxlength="45"
+                              />
+                              <div class="valid-feedback">Looks good!</div>
+                            </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="col-md-8 mb-3">
+                              <label class="text-light" for="origin"
+                                >Saisir l'origine :</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="origin"
+                                name="origin"
+                                placeholder="La planète Mars"
+                                required
+                                minlength="2"
+                                maxlength="45"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="col-md-8 mb-3">
+                              <label class="text-light" for="secretIdentity">
+                                Saisir votre identité secrète:
+                              </label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="secretIdentity"
+                                name="secretIdentity"
+                                placeholder="username"
+                                required
+                                minlength="2"
+                                maxlength="45"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="col-md-8 mb-3">
+                              <label class="text-light" for="powers">
+                                Saisir vos pouvoirs spécial :
+                              </label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="powers"
+                                name="powers"
+                                placeholder="Super Power"
+                                required
+                                minlength="2"
+                                maxlength="45"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="text-center">
+                            <input type="hidden" name="admin" value="null" />
+                            <input
+                              type="hidden"
+                              name="source"
+                              value="registerForms"
+                            />
+                            <button
+                              class="btn btn-danger"
+                              style="width: 30%"
+                              type="submit"
+                              id="btnCreer"
+                            >
+                              Créer
+                            </button>
+                          </div>
+                          <br />
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-dark mr-2 text-light"
+                href="/mechants"
+                >Les Méchants</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-dark mr-2 text-light"
+                href="/gardiens"
+                >Les Gardiens</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-dark mr-2 text-light"
+                href="/"
+                id="btnAcceuil"
+                >Acceuil</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 mx-auto m-3">
+          <div class="card border-warning">
+            <img
+              class="card-img-top"
+              src="images/ronan.jpg"
+              alt="Card image cap"
+            />
+          </div>
+
+          <div class="card border-warning mt-3">
+            <img
+              class="card-img-top"
+              src="images/gamora.jpg"
+              alt="Card image cap"
+            />
+          </div>
+
+          <div class="card border-warning mt-3">
+            <img
+              class="card-img-top"
+              src="images/mantisDrax.jpg"
+              alt="Card image cap"
+            />
+          </div>
+
+          <div class="card border-warning mt-3">
+            <img
+              class="card-img-top"
+              src="images/rocketEt.jpg"
+              alt="Card image cap"
+            />
+          </div>
+
+          <div class="card border-warning mt-3">
+            <img
+              class="card-img-top"
+              src="images/yondu.jpg"
+              alt="Card image cap"
+            />
+          </div>
+        </div>
+        <div class="col-md-5 m-2">
+          <div
+            class="row m-1 p-4 shadow-4 rounded-3 card border-warning transparentBlack"
+          >
+            <table class="table table-bordered text-light">
+              <h3 class="text-center mb-4">
+                <span class="badge badge-warning"
+                  >Les Super Gardiens de la galaxie
+                  <span class="badge badge-danger badge-pill"
+                    ><%= gardiens.length %></span
+                  ></span
+                >
+              </h3>
+              <thead>
+                <tr class="text-center">
+                  <th>Name</th>
+                  <th>Origin</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="heroesTableau">
+                <%for(let i =0;i < gardiens.length; i++) { %>
+                <tr>
+                  <th><%= gardiens[i].name %></th>
+                  <th><%= gardiens[i].origin %></th>
+                  <th class="text-center">
+                    <a
+                      href="gardiens/update/<%=gardiens[i].name %>/<%= gardiens[i].origin %>/<%= gardiens[i].secretIdentity %>/<%= gardiens[i].powers %>"
+                      class="btn btn-outline-info bg-dark"
+                    >
+                      Details
+                    </a>
+                  </th>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+
+          <div
+            class="row m-1 p-4 shadow-4 rounded-3 card border-warning transparentBlack"
+          >
+            <table class="table table-bordered text-light">
+              <h3 class="text-center mb-4">
+                <span class="badge badge-warning"
+                  >Les Méchants de la galaxie
+                  <span class="badge badge-danger badge-pill"
+                    ><%= mechants.length %></span
+                  ></span
+                >
+              </h3>
+              <thead>
+                <tr class="text-center">
+                  <th>Name</th>
+                  <th>Origin</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="badHeroesTableau">
+                <%for(let i =0;i < mechants.length; i++) { %>
+                <tr>
+                  <th><%= mechants[i].name %></th>
+                  <th><%= mechants[i].origin %></th>
+                  <th class="text-center">
+                    <a
+                      href="gardiens/update/<%=mechants[i].name %>/<%= mechants[i].origin %>/<%= mechants[i].secretIdentity %>/<%= mechants[i].powers %>"
+                      class="btn btn-outline-info bg-dark"
+                    >
+                      Details
+                    </a>
+                  </th>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 mx-auto m-3">
+          <div class="card border-warning">
+            <img
+              class="card-img-top"
+              src="images/star.jpg"
+              alt="Card image cap"
+            />
+          </div>
+
+          <div class="card border-warning mt-3">
+            <img
+              class="card-img-top"
+              src="images/groot.jpeg"
+              alt="Card image cap"
+            />
+          </div>
+
+          <div class="card border-warning mt-3">
+            <img
+              class="card-img-top"
+              src="images/mantis.jpg"
+              alt="Card image cap"
+            />
+          </div>
+
+          <div class="card border-warning mt-3">
+            <img
+              class="card-img-top"
+              src="images/nebula.jpg"
+              alt="Card image cap"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

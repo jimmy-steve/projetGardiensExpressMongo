@@ -1,0 +1,90 @@
+[
+    {
+      "id": 1,
+      "name": "Ronan l'Accusateur",
+      "origin": "Terre-199999",
+      "secretIdentity": "Ronan",
+      "powers": [
+        "Force, vitesse, endurance et réflexes surhumains",
+        "Armure cybernétique (exosquelette)",
+        "Projection énergie",
+        "Vol dans les airs",
+        "Création de champs de force",
+        "Manipulation de la matière"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Yondu Udunto",
+      "origin": "Centauri IV",
+      "secretIdentity": "Yondu",
+      "powers": ["Arc et flèches en yaka", "Sensibles au son"]
+    },
+    {
+      "id": 3,
+      "name": "Nebula",
+      "origin": "Luphomoid (Cyborg)",
+      "secretIdentity": "Nebula",
+      "powers": [
+        "Superbe athlète",
+        "Intelligente et une grande tacticienne",
+        "Récupération stupéfiantes",
+        "lance-flammes montés sur ses poignets"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Korath le Poursuivant",
+      "origin": "Kree (Cyborg)",
+      "secretIdentity": "Korath",
+      "powers": [
+        "Implants cybernétiques",
+        "Force et une endurance accrues",
+        "expert en cybernétique et en génétique",
+        "Arts martiaux Kree"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Starhawk",
+      "origin": "Planète Vesper",
+      "secretIdentity": "Stakar Ogord",
+      "powers": [
+        "Vieillissement retardé très lentement",
+        "vol à la vitesse de la lumière à travers l'espace",
+        "Émission de rafales photoniques brûlantes",
+        "vision accrue",
+        "Précognition"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Thanos",
+      "origin": "Titan (système saturnien)",
+      "secretIdentity": "Thanos",
+      "powers": [
+        "Combattant au corps à corps expert",
+        "Intelligence supérieure et stratège expert",
+        "Force, endurance, durabilité, agilité, vitesse et longévité surhumaines",
+        "Projection de rafales d'énergie",
+        "Télékinésie, télépathie et téléportation",
+        "Omniscient et omnipotent"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Adam Warlock",
+      "origin": "La Ruche (Shard Island, Océan Atlantique)",
+      "secretIdentity": "Le Mage",
+      "powers": [
+        "Force, vitesse, agilité et durabilité surhumaines",
+        "Vol dans les airs",
+        "Manipulation et absorption de l'énergie",
+        "Manipulation de la matière",
+        "Expert en magie",
+        "Télépathie, conscience cosmique",
+        "Régénération"
+      ]
+    }
+  ]
+

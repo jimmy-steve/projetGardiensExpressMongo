@@ -1,0 +1,23 @@
+body {
+  font-family: Nunito sans, sans-serif;
+}
+
+.background {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/star-lord-peter-jason-quill-4340716_1920.jpg") center center
+      fixed no-repeat;
+  background-size: cover;
+  height: 1200px;
+}
+
+.transparentBlack {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+}
+
+.couleurBleu {
+  color: #03a9f4;
+}
+
+a {
+  color: #00b7ff;
+}

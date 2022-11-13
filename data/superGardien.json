@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "name": "Star Lord",
+    "origin": "États-Unis",
+    "secretIdentity": "Peter Jason Quill",
+    "powers": [
+      "Aucun super-pouvoir",
+      "Maîtrise des sports de combat",
+      "Excellent tacticien et combattant",
+      "Utilisateur d'armes à feu expert"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Gamora",
+    "origin": "Terre-199999",
+    "secretIdentity": "Gamora Zen Whoberi Ben Titan",
+    "powers": ["Super force", "Régénération", "Rapidité"]
+  },
+  {
+    "id": 3,
+    "name": "Rocket Racoon",
+    "origin": "Univers-616",
+    "secretIdentity": "89P13",
+    "powers": ["Pilote accompli", "Excellent tireur"]
+  },
+  {
+    "id": 4,
+    "name": "Drax le destructeur",
+    "origin": "Univers-616",
+    "secretIdentity": "Drax",
+    "powers": [
+      "Force, endurance, durabilité et vitesse surhumaines",
+      "Sens surhumains",
+      "Auto-subsistance",
+      "Facteur guérisseur",
+      "Aura tueuse (Thanos)"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Groot",
+    "origin": "La planète X",
+    "secretIdentity": "Groot",
+    "powers": [
+      "Force, endurance, durabilité et sens surhumains",
+      "Immortalité",
+      "Facteur guérisseur",
+      "Élasticité/plasticité",
+      "Manipulation des plantes",
+      "Résistance au feu"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Baby Groot",
+    "origin": "La planète X",
+    "secretIdentity": "Fils de Groot",
+    "powers": ["Contrôler des arbres", "Facteur guérisseur"]
+  },
+  {
+    "id": 7,
+    "name": "Mantis",
+    "origin": "Mi-vietnamienne mi-allemande",
+    "secretIdentity": "Vierge céleste, Dragon Lady",
+    "powers": [
+      "Maître artiste martial",
+      "Empathie",
+      "Manipulation d'usine",
+      "Guérison accélérée",
+      "Projection astrale",
+      "Capacité à communiquer",
+      "Projection d'énergie"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Thor",
+    "origin": "Asgard",
+    "secretIdentity": "Thor Odinson",
+    "powers": [
+      "Force, résistance, durabilité et sens surhumains",
+      "Longévité améliorée",
+      "Immunité aux maladies terrestres",
+      "Contrôle de la foudre et des orages",
+      "Création de portails interdimensionnels",
+      "Vol dans les airs",
+      "Pouvoirs d'Odin"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Ayesha",
+    "origin": "Univers-616",
+    "secretIdentity": "Prêtresses des Souverains",
+    "powers": [
+      "Perception généalogique aiguë",
+      "Contrôle la Flotte d'Omnicrafts",
+      "Intellect de niveau génie",
+      "Transformer génétiquement sa race"
+    ]
+  }
+]
